@@ -1,6 +1,5 @@
-# Pipeline for IPStack API
 pipeline "get_ipstack_info" {
-  description = "Retrieve information about an IP address using IPStack."
+  description = "Retrieve information about an IP address."
 
   param "access_key" {
     type    = string
@@ -23,7 +22,6 @@ pipeline "get_ipstack_info" {
   }
 
   step "http" "get_ipstack_info" {
-    title  = "Retrieve IPStack data."
     method = "post"
 
     url = "http://api.ipstack.com/${param.ip_address}?access_key=${param.access_key}&output=${param.output}&security=${param.security_module}"

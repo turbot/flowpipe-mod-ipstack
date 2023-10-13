@@ -1,7 +1,7 @@
-access_key="db6b801bf32fb12345557e5e6cfaf2"
+access_key="db6b801bfsffsdf123455e6cfaf2"
 ip_address="99.84.45.75"
 # Set of IPs supported for paid subscription
 #ip_address="134.201.250.155,72.229.28.185,110.174.165.78"
 output="json"
 # Enable Security Module, supported for paid subscription
-#security_module=0
+security_module=0

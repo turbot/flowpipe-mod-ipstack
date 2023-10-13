@@ -1,9 +1,3 @@
-# TODO: Should these have defaults?
-# Right now they do due to :
-# panic: missing 2 variable values:
-# repository_full_name not set
-# token not set
-
 variable "access_key" {
   type        = string
   description = "The ipstack personal access token to authenticate to the ipstack APIs. Sign up on the https://ipstack.com/ to get your free token. It looks like e0067f483763d6132d549234f8a6de22."
