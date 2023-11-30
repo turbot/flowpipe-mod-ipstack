@@ -2,9 +2,8 @@
 
 A collection of [Flowpipe](https://flowpipe.io) pipelines that can be used to:
 
-- Check Abuse Reports for an IPv4/IPv6
-- Report an IP address
-- Get blacklisted IPs
+- Get external IP related info
+- Get requester IP
 - And more!
 
 <!-- ![flowpipe_pipeline_run](docs/images/flowpipe_pipeline_run.png) -->

@@ -2,7 +2,8 @@
 
 A collection of [Flowpipe](https://flowpipe.io) pipelines that can be used to:
 
-- Get IP related info
+- Get external IP related info
+- Get requester IP info
 - And more!
 
 ## Documentation
