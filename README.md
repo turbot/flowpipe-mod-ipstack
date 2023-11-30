@@ -1,6 +1,17 @@
-# ipstack Mod for Flowpipe
+# ipstack Library Mod for Flowpipe
 
-Run pipelines and use triggers for ipstack resources.
+A collection of [Flowpipe](https://flowpipe.io) pipelines that can be used to:
+
+- Check Abuse Reports for an IPv4/IPv6
+- Report an IP address
+- Get blacklisted IPs
+- And more!
+
+<!-- ![flowpipe_pipeline_run](docs/images/flowpipe_pipeline_run.png) -->
+
+## Documentation
+
+- **[Pipelines →](https://hub.flowpipe.io/mods/turbot/ipstack/pipelines)**
 
 ## Getting started
 
@@ -20,46 +31,64 @@ git clone https://github.com/turbot/flowpipe-mod-ipstack.git
 cd flowpipe-mod-ipstack
 ```
 
-### Usage
+### Configuration
 
-Start your server to get started:
+Configure your credentials:
 
 ```sh
-flowpipe service start
+cp flowpipe.fpvars.example flowpipe.fpvars
+vi flowpipe.fpvars
+```
+
+It's recommended to configure credentials through [input variables](https://flowpipe.io/docs/using-flowpipe/mod-variables) by setting them in the `flowpipe.fpvars` file.
+
+**Note:** Credentials can also be passed in each pipeline run with `--pipeline-args api_key=bfc6f1c42dsfsdfdsfsdf327b26977977b2bad9ac4adfdsfdsfsdda98f313c3d389126de0d`.
+
+Additional input variables may be defined in the mod's `variables.fp` file that can be configured to better match your environment and requirements.
+
+Variables with defaults set do not need to be explicitly set, but it may be helpful to override them.
+
+### Usage
+
+Start the Flowpipe server to get started:
+
+```sh
+flowpipe server
 ```
 
 Run a pipeline:
 
 ```sh
-flowpipe pipeline run user_get_current
+flowpipe pipeline run ip_lookup
 ```
 
-### Credentials
+## Passing pipeline arguments
 
-This mod uses the credentials configured in `flowpipe.pvars` or passed through `--pipeline-args token`.
+To pass values into pipeline [parameters](https://flowpipe.io/docs/using-flowpipe/pipeline-parameters), use the following syntax:
 
-### Configuration
+```sh
+flowpipe pipeline run ip_lookup --arg ip_address='76.76.21.21'
+```
 
-Pipelines have [input variables](https://flowpipe.io/docs/using-flowpipe/mod-variables) that can be configured to better match your environment and requirements. Some variables have defaults defined in its source file, e.g., `variables.hcl`, but these can be overwritten in several ways:
+Multiple pipeline args can be passed in with separate `--arg` flags.
 
-- Copy and rename the `flowpipe.pvars.example` file to `flowpipe.pvars`, and then modify the variable values inside that file
-- Pass in a value on the command line:
-
-  ```shell
-  flowpipe pipeline run user_get_current --pipeline-arg token="ghp_Abc123"
-  ```
-
-These are only some of the ways you can set variables. For a full list, please see [Passing Input Variables](https://flowpipe.io/docs/using-flowpipe/mod-variables#passing-input-variables).
+For more information on passing arguments, please see [Pipeline Args](https://flowpipe.io/docs/using-flowpipe/pipeline-arguments).
 
 ## Contributing
 
 If you have an idea for additional controls or just want to help maintain and extend this mod ([or others](https://github.com/topics/flowpipe-mod)) we would love you to join the community and start contributing.
 
-- **[Join our Slack community →](https://flowpipe.io/community/join)** and hang out with other Mod developers.
+- **[Join #flowpipe in our Slack community ](https://flowpipe.io/community/join)**
 
-Please see the [contribution guidelines](https://github.com/turbot/flowpipe/blob/main/CONTRIBUTING.md) and our [code of conduct](https://github.com/turbot/flowpipe/blob/main/CODE_OF_CONDUCT.md). All contributions are subject to the [Apache 2.0 open source license](https://github.com/turbot/flowpipe-mod-ipstack/blob/main/LICENSE).
+Please see the [contribution guidelines](https://github.com/turbot/flowpipe/blob/main/CONTRIBUTING.md) and our [code of conduct](https://github.com/turbot/flowpipe/blob/main/CODE_OF_CONDUCT.md).
 
 Want to help but not sure where to start? Pick up one of the `help wanted` issues:
 
 - [Flowpipe](https://github.com/turbot/flowpipe/labels/help%20wanted)
-- [ipstack Mod](https://github.com/turbot/flowpipe-mod-ipstack/labels/help%20wanted)
+- [ipstack Library Mod](https://github.com/turbot/flowpipe-mod-ipstack/labels/help%20wanted)
+
+## License
+
+This mod is licensed under the [Apache License 2.0](https://github.com/turbot/flowpipe-mod-ipstack/blob/main/LICENSE).
+
+Flowpipe is licensed under the [AGPLv3](https://github.com/turbot/flowpipe/blob/main/LICENSE).
