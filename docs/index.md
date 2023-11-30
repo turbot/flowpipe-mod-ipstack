@@ -1,3 +1,7 @@
+---
+repository: "https://github.com/turbot/flowpipe-mod-ipstack"
+---
+
 # ipstack Library Mod for Flowpipe
 
 A collection of [Flowpipe](https://flowpipe.io) pipelines that can be used to:
