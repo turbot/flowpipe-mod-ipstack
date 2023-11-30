@@ -21,7 +21,7 @@ pipeline "ip_lookup" {
 
   param "security_module" {
     type        = number
-    description = "The required security module. Professional Plus plan is required to access the ipstack API's Security Modul."
+    description = "The required security module. Professional Plus plan is required to access the ipstack API's Security Module."
     default     = 0
   }
 
