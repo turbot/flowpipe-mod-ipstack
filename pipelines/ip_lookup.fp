@@ -36,7 +36,7 @@ pipeline "ip_lookup" {
     url    = "http://api.ipstack.com/${param.ip_address}?access_key=${param.access_key}&output=${param.output_type}&security=${param.security_module}&fields=${param.fields}"
   }
 
-  output "response_body" {
+  output "ip_details" {
     value = step.http.ip_lookup.response_body
   }
 }
