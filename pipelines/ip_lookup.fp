@@ -2,10 +2,10 @@ pipeline "ip_lookup" {
   title       = "IP Address Look up"
   description = "Retrieve information about an IP address."
 
-  param "access_key" {
+  param "cred" {
     type        = string
-    description = "The ipstack API token."
-    default     = var.access_key
+    description = local.cred_param_description
+    default     = "default"
   }
 
   param "ip_address" {
@@ -33,7 +33,7 @@ pipeline "ip_lookup" {
 
   step "http" "ip_lookup" {
     method = "post"
-    url    = "http://api.ipstack.com/${param.ip_address}?access_key=${param.access_key}&output=${param.output_type}&security=${param.security_module}&fields=${param.fields}"
+    url    = "http://api.ipstack.com/${param.ip_address}?access_key=${credential.ipstack[param.cred].access_key}&output=${param.output_type}&security=${param.security_module}&fields=${param.fields}"
   }
 
   output "ip_details" {
