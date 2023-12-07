@@ -2,6 +2,10 @@ pipeline "ip_lookup" {
   title       = "IP Address Look up"
   description = "Retrieve information about an IP address."
 
+  tags = {
+    type = "featured"
+  }
+
   param "cred" {
     type        = string
     description = local.cred_param_description
