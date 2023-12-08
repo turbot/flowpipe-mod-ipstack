@@ -41,7 +41,7 @@ vi flowpipe.fpvars
 
 It's recommended to configure credentials through [input variables](https://flowpipe.io/docs/using-flowpipe/mod-variables) by setting them in the `flowpipe.fpvars` file.
 
-**Note:** Credentials can also be passed in each pipeline run with `--pipeline-args api_key=bfc6f1c42dsfsdfdsfsdf327b26977977b2bad9ac4adfdsfdsfsdda98f313c3d389126de0d`.
+**Note:** Credentials can also be passed in each pipeline run with `----arg api_key=bfc6f1c42dsfsdfdsfsdf327b26977977b2bad9ac4adfdsfdsfsdda98f313c3d389126de0d`.
 
 Additional input variables may be defined in the mod's `variables.fp` file that can be configured to better match your environment and requirements.
 

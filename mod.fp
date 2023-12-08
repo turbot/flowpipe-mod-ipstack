@@ -4,7 +4,7 @@ mod "ipstack" {
   color         = "#FF9900"
   documentation = file("./docs/index.md")
   icon          = "/images/flowpipe/mods/turbot/ipstack.svg"
-  categories    = ["ipstack"]
+  categories    = ["networking"]
 
   opengraph {
     title       = "ipstack"
