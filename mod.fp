@@ -1,14 +1,14 @@
 mod "ipstack" {
-  title         = "ipstack"
-  description   = "Run pipelines and triggers that interact with ipstack."
+  title         = "Ipstack"
+  description   = "Run pipelines to supercharge your Ipstack workflows using Flowpipe."
   color         = "#FF9900"
   documentation = file("./docs/index.md")
-  icon          = "/images/flowpipe/mods/turbot/ipstack.svg"
+  icon          = "/images/mods/turbot/ipstack.svg"
   categories    = ["networking"]
 
   opengraph {
-    title       = "ipstack"
-    description = "Run pipelines and triggers that interact with ipstack."
-    image       = "/images/flowpipe/mods/turbot/ipstack-social-graphic.png"
+    title       = "Ipstack Mod for Flowpipe"
+    description = "Run pipelines to supercharge your Ipstack workflows using Flowpipe."
+    image       = "/images/mods/turbot/ipstack-social-graphic.png"
   }
 }

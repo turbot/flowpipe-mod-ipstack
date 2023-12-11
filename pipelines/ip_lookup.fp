@@ -1,5 +1,5 @@
 pipeline "ip_lookup" {
-  title       = "IP Address Look up"
+  title       = "IP Address Lookup"
   description = "Retrieve information about an IP address."
 
   tags = {
@@ -14,7 +14,7 @@ pipeline "ip_lookup" {
 
   param "ip_address" {
     type        = string
-    description = "The ip addrss to lookup."
+    description = "The IP address to lookup."
   }
 
   param "output_type" {
@@ -25,7 +25,7 @@ pipeline "ip_lookup" {
 
   param "security_module" {
     type        = number
-    description = "The required security module. Professional Plus plan is required to access the ipstack API's Security Module."
+    description = "The required security module. Professional plus plan is required to access the ipstack API's security module."
     default     = 0
   }
 
@@ -41,6 +41,7 @@ pipeline "ip_lookup" {
   }
 
   output "ip_details" {
+    description = "IP address details."
     value = step.http.ip_lookup.response_body
   }
 }

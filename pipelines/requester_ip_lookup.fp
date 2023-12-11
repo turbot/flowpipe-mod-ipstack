@@ -1,5 +1,5 @@
 pipeline "requester_ip_lookup" {
-  title       = "Requester IP Look up"
+  title       = "Requester IP Lookup"
   description = "Retrieve information about the requester IP address."
 
   param "cred" {
@@ -16,7 +16,7 @@ pipeline "requester_ip_lookup" {
 
   param "security_module" {
     type        = number
-    description = "The required security module. Professional Plus plan is required to access the ipstack API's Security Module."
+    description = "The required security module. Professional plus plan is required to access the ipstack API's security module."
     default     = 0
   }
 
@@ -32,6 +32,7 @@ pipeline "requester_ip_lookup" {
   }
 
   output "requester_ip_details" {
+    description = "Requester IP address details."
     value = step.http.requester_ip_lookup.response_body
   }
 }
