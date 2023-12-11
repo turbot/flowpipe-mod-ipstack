@@ -1,5 +1,5 @@
 pipeline "lookup_requester_ip_address" {
-  title       = "Requester IP Lookup"
+  title       = "Lookup Requester IP Address"
   description = "Retrieve information about the requester IP address."
 
   param "cred" {

@@ -1,5 +1,5 @@
 pipeline "lookup_ip_address" {
-  title       = "IP Address Lookup"
+  title       = "Lookup IP Address"
   description = "Retrieve information about an IP address."
 
   tags = {
