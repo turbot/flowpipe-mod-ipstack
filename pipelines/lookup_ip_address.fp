@@ -1,4 +1,4 @@
-pipeline "ip_lookup" {
+pipeline "lookup_ip_address" {
   title       = "IP Address Lookup"
   description = "Retrieve information about an IP address."
 
@@ -35,13 +35,13 @@ pipeline "ip_lookup" {
     default     = "main,country_code,location"
   }
 
-  step "http" "ip_lookup" {
+  step "http" "lookup_ip_address" {
     method = "post"
     url    = "http://api.ipstack.com/${param.ip_address}?access_key=${credential.ipstack[param.cred].access_key}&output=${param.output_type}&security=${param.security_module}&fields=${param.fields}"
   }
 
-  output "ip_details" {
+  output "ip_address_details" {
     description = "IP address details."
-    value = step.http.ip_lookup.response_body
+    value = step.http.lookup_ip_address.response_body
   }
 }

@@ -60,7 +60,7 @@ flowpipe server
 Run a pipeline:
 
 ```sh
-flowpipe pipeline run ip_lookup
+flowpipe pipeline run lookup_ip_address
 ```
 
 ## Passing pipeline arguments
@@ -68,7 +68,7 @@ flowpipe pipeline run ip_lookup
 To pass values into pipeline [parameters](https://flowpipe.io/docs/using-flowpipe/pipeline-parameters), use the following syntax:
 
 ```sh
-flowpipe pipeline run ip_lookup --arg ip_address='76.76.21.21'
+flowpipe pipeline run lookup_ip_address --arg ip_address='76.76.21.21'
 ```
 
 Multiple pipeline args can be passed in with separate `--arg` flags.
