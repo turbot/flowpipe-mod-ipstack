@@ -4,7 +4,7 @@ Ipstack pipeline library for [Flowpipe](https://flowpipe.io) enabling seamless i
 
 ## Documentation
 
-- **[Pipelines →](https://hub.flowpipe.io/mods/turbot/aws/pipelines)**
+- **[Pipelines →](https://hub.flowpipe.io/mods/turbot/ipstack/pipelines)**
 
 ## Getting Started
 
