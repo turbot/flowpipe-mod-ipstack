@@ -2,7 +2,7 @@ mod "ipstack" {
   title         = "Ipstack"
   description   = "Run pipelines to supercharge your Ipstack workflows using Flowpipe."
   color         = "#FF9900"
-  documentation = file("./docs/index.md")
+  documentation = file("./README.md")
   icon          = "/images/mods/turbot/ipstack.svg"
   categories    = ["networking"]
 
