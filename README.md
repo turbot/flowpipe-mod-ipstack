@@ -75,6 +75,9 @@ flowpipe pipeline run lookup_ip_address --arg ip_address='76.76.21.21' --arg cre
 
 For more examples on how you can run pipelines, please see [Run Pipelines](https://flowpipe.io/docs/run/pipelines).
 
+### Configuration
+
+No additional configuration is required.
 
 ## Open Source & Contributing
 
