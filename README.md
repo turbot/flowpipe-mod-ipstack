@@ -98,12 +98,6 @@ Run a pipeline:
 flowpipe pipeline run lookup_ip_address --arg ip_address='76.76.21.21'
 ```
 
-You can pass in pipeline arguments as well:
-
-```sh
-flowpipe pipeline run lookup_ip_address --arg ip_address='76.76.21.21' --arg output_type='xml'
-```
-
 To use a specific `credential`, specify the `cred` pipeline argument:
 
 ```sh
