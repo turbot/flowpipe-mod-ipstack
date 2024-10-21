@@ -1,4 +1,4 @@
 # Common descriptions
 locals {
-  conn_param_description = "Name for connections to use. If not provided, the default connection will be used."
+  conn_param_description = "Name of Ipstack connection to use. If not provided, the default Ipstack connection will be used."
 }
